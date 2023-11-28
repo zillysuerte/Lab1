@@ -27,16 +27,16 @@ namespace Lab1
             Console.WriteLine("После перемещения 0:");
             PrintVector(firstPart.Vector);
 
-           /* Console.WriteLine("Часть 2:");
+            Console.WriteLine("Часть 2:");
 
-            var secondPart = new SecondPart(10, 10);
+            var secondPart = new SecondPart(5, 5);
             PrintMatrix(secondPart.Matrix);
 
             var smoothingMatrix = secondPart.GetSmoothingMatrix();
             Console.WriteLine("Сглаживание матрицы:");
             PrintMatrix(smoothingMatrix);
 
-            Console.WriteLine("Сумма модулей элементов, расположенных ниже главной диагонали в сглаженной матрице: " + secondPart.GetSumUnderDiogSmoothingMatrix());*/
+            Console.WriteLine("Сумма модулей элементов, расположенных ниже главной диагонали в сглаженной матрице: " + secondPart.GetSumUnderDiogSmoothingMatrix());
            Console.ReadKey();
         }
 
@@ -45,13 +45,14 @@ namespace Lab1
             Console.WriteLine(string.Join(" ", vector));
         }
 
-        static void PrintMatrix(int[,] matrix)
+        static void PrintMatrix(double[,] matrix)
         {
+           // Console.WriteLine(matrix[0, matrix.GetLength(0)-1]);
             for (int i = 0; i < matrix.GetLength(0); i++)
             {
                 for (int j = 0; j < matrix.GetLength(1); j++)
                 {
-                    Console.Write(" ", matrix[i, j]);
+                    Console.Write("  " + matrix[i, j]);
                 }
                 Console.WriteLine();
             }
